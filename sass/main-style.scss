@@ -5,6 +5,13 @@
   }
 }
 
+//*-*-*-*-*-*-*-*-*-*-- The 1600px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-tablet-bigger {
+  @media screen and (max-width: break-point(break-point-tablet-bigger)) {
+    @content;
+  }
+}
+
 //*-*-*-*-*-*-*-*-*-*-- The 1200px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
 @mixin media-tablet {
   @media screen and (max-width: break-point(break-point-tablet)) {
@@ -43,12 +50,6 @@
 @import "10.footer";
 
 // *-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Placeholder Styles *-*-*-*-*-*-*-*-*-*-*-*-*
-// Background Properties
-%bg {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 // Section Padding
 %sec-padding {

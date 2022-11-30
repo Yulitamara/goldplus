@@ -1,0 +1,28 @@
+.advantages {
+  grid-column: container-start / container-end;
+
+  //   @extend %sec-padding;
+  padding: 3rem 35rem;
+  background-color: var(--color-primary);
+
+  &__title {
+    color: var(--color-on-primary);
+    font-size: font-size(font-size-large);
+    font-weight: font-weight(font-weight-regular);
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+  }
+
+  @include media-tablet-bigger {
+    padding: 3rem 26rem;
+  }
+  @include media-tablet {
+    padding: 3rem 10rem;
+  }
+  @include media-medium {
+    padding: 3rem 3rem;
+  }
+  @include media-small {
+    padding: 3rem 1rem;
+  }
+}

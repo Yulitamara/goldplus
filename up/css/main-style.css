@@ -393,7 +393,7 @@ input:focus {
 }
 .hero__content--para {
   font-size: calc(1.5rem + 1vw);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: calc(1rem + 2vw);
 }
 .hero__content--boxes {
@@ -520,13 +520,18 @@ input:focus {
     gap: 4rem;
   }
   .sales__content--boxes__box--header__icon-container {
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
   }
 }
 @media screen and (max-width: 800px) {
   .sales__content {
     padding: 0 4rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sales__content {
+    padding: 0 1rem;
   }
 }
 
@@ -536,6 +541,39 @@ input:focus {
 @media screen and (max-width: 1200px) {
   .reverse {
     flex-direction: column;
+  }
+}
+
+.advantages {
+  grid-column: container-start/container-end;
+  padding: 3rem 35rem;
+  background-color: var(--color-primary);
+}
+.advantages__title {
+  color: var(--color-on-primary);
+  font-size: calc(1.5rem + 2vw);
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 1600px) {
+  .advantages {
+    padding: 3rem 26rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .advantages {
+    padding: 3rem 10rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .advantages {
+    padding: 3rem 3rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .advantages {
+    padding: 3rem 1rem;
   }
 }
 
@@ -576,7 +614,7 @@ input:focus {
   border-top: 1px solid #f2f2f2;
 }
 .footer__para {
-  color: var(--color-on-primary);
+  color: var(--color-background);
   font-size: calc(1rem + 0.2vw);
 }
 

@@ -92,8 +92,8 @@
         &__box {
           &--header {
             &__icon-container {
-              height: 35px;
-              width: 35px;
+              height: 30px;
+              width: 30px;
             }
           }
         }
@@ -105,6 +105,12 @@
   @include media-medium {
     &__content {
       padding: 0 4rem;
+    }
+  }
+
+  @include media-small {
+    &__content {
+      padding: 0 1rem;
     }
   }
 }
