@@ -526,7 +526,7 @@ input:focus {
 }
 @media screen and (max-width: 800px) {
   .sales__content {
-    padding: 0 4rem;
+    padding: 0 2rem;
   }
 }
 @media screen and (max-width: 400px) {
