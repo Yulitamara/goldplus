@@ -1,0 +1,118 @@
+.sales {
+  grid-column: center-start / center-end;
+  background-color: var(--color-on-background);
+  color: var(--color-background);
+  @extend %sec-padding;
+  display: flex;
+  flex-direction: column;
+  &__line {
+    height: 2px;
+    width: 100%;
+    margin: 2rem;
+    background: -webkit-linear-gradient(left, #8f6b29, #fde08d, #df9f28);
+    background: linear-gradient(left, #8f6b29, #fde08d, #df9f28);
+  }
+  &__title {
+    padding-top: 2rem;
+    align-self: flex-start;
+    color: var(--color-primary);
+    font-size: font-size(font-size-large);
+    font-weight: font-weight(font-weight-regular);
+    letter-spacing: 0.1rem;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    &--img {
+      img {
+        width: 300px;
+      }
+    }
+    &--boxes {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      &__box {
+        &--header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &__title {
+            color: var(--color-primary);
+            transition: all 0.3s ease-in-out;
+            @extend %sec-heading;
+          }
+          &__title:hover {
+            color: var(--color-hover-primary);
+          }
+          &__icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-primary);
+            color: var(--color-on-primary);
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            transition: all 0.3s ease-in-out;
+          }
+          &__icon-container:hover {
+            background-color: var(--color-hover-primary);
+          }
+        }
+
+        &--para {
+          @extend %sec-para;
+        }
+      }
+    }
+  }
+  // *-*-*-*-*-*-*-*-*-*-- The 1200px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
+  @include media-tablet {
+    align-items: center;
+
+    &__title {
+      align-self: center;
+    }
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 8rem;
+      &--img {
+        img {
+          width: 200px;
+        }
+      }
+      &--boxes {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        &__box {
+          &--header {
+            &__icon-container {
+              height: 35px;
+              width: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //  *-*-*-*-*-*-*-*-*-*-- The 600px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
+  @include media-medium {
+    &__content {
+      padding: 0 4rem;
+    }
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+
+  @include media-tablet {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,80 @@
+.hero {
+  grid-column: container-start / container-end;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  @extend %sec-padding;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    @extend %sec-padding;
+    &--title {
+      padding: 1rem;
+      width: 212px;
+    }
+    &--para {
+      font-size: font-size(font-size-regular);
+      font-weight: font-weight(font-weight-light);
+      margin-bottom: calc(1rem + 2vw);
+    }
+    &--boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      grid-gap: 2rem;
+      place-content: center;
+      &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+        border: 1px solid var(--color-on-primary);
+        color: var(--color-on-primary);
+        padding: 2rem;
+        border-radius: 10px;
+        &--header {
+          display: flex;
+          line-height: normal;
+          align-items: center;
+          gap: 24px;
+          &__title {
+            @extend %sec-heading;
+          }
+          &__icon {
+            font-size: font-size(font-size-regular);
+          }
+        }
+        &--para {
+          @extend %sec-para;
+          text-align: center;
+        }
+      }
+    }
+  }
+  // *-*-*-*-*-*-*-*-*-*-- The 1200px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
+  @include media-tablet {
+    height: fit-content;
+    &__content {
+      margin-top: 0;
+    }
+  }
+
+  // *-*-*-*-*-*-*-*-*-*-- The 600px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
+  @include media-medium {
+    &__content {
+      &--para {
+        font-size: 2rem;
+      }
+    }
+  }
+}

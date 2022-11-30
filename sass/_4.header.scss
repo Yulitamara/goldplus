@@ -1,0 +1,222 @@
+.header {
+  grid-column: container-start / container-end;
+  z-index: 10;
+
+  // Dynamic Class => is toggled using JavaScript
+  // Middle Line
+  &.open .header__menu--line {
+    background-color: transparent;
+  }
+
+  &.open .header__menu--line::before {
+    transform: rotate(45deg);
+  }
+
+  &.open .header__menu--line::after {
+    transform: rotate(-45deg);
+  }
+
+  &.open .header__menu--line::before,
+  &.open .header__menu--line::after {
+    top: 0;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background);
+
+    position: fixed;
+    opacity: 0;
+    display: none;
+    z-index: 10;
+  }
+
+  &__nav {
+    width: 100%;
+    height: 12rem;
+    line-height: 7rem;
+    position: fixed;
+    max-width: 1700px;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--color-on-background);
+    background-color: var(--color-background);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    &--logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 150px;
+      }
+    }
+
+    &--links {
+      display: flex;
+      align-items: center;
+
+      &__item {
+        a:link,
+        a:visited {
+          // margin: 0 2vw;
+          padding: 0 2rem;
+          color: var(--color-on-background);
+        }
+      }
+
+      // direction => downwards
+      &__item:nth-child(odd) {
+        animation: downwards 1s forwards;
+      }
+
+      // direction => upwards
+      &__item:nth-child(even) {
+        animation: upwards 1s forwards;
+      }
+    }
+  }
+
+  //*-*-*-*-*-*-*-*-*-*-- The 1700px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+  @include media-desktop {
+    &__nav {
+      &--links {
+        &__item {
+          a:link,
+          a:visited {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  //*-*-*-*-*-*-*-*-*-*-- The 1200px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+
+  @include media-tablet {
+    &__nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 25rem;
+      height: 100vh;
+      line-height: initial;
+      flex-direction: column;
+      text-align: center;
+      z-index: 20;
+      transform: perspective(70rem) rotateY(180deg);
+      transform-origin: top left;
+      transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+      &--links {
+        height: 70%;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        &__item {
+          animation: initial;
+
+          a:link,
+          a:visited {
+            transform-origin: left;
+            margin-right: initial;
+            padding: 1rem;
+            font-size: font-size(font-size-small);
+          }
+
+          a:hover,
+          a:active {
+            transform: rotateY(90deg);
+          }
+
+          a:link::after,
+          a:visited::after {
+            top: 0;
+            bottom: 100%;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            transform-origin: left;
+            transform: rotateY(-90deg);
+          }
+        }
+      }
+    }
+
+    &.open nav {
+      transform: rotateY(0);
+    }
+
+    &__menu {
+      position: fixed;
+      height: 4rem;
+      width: 4rem;
+      top: 2rem;
+      right: 2rem;
+      padding: 2.5rem;
+      z-index: 20;
+      cursor: pointer;
+
+      &--line,
+      &--line::before,
+      &--line::after {
+        content: "";
+        position: absolute;
+        width: 3.5rem;
+        height: 0.2rem;
+        background-color: var(--color-background);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transition: all 0.5s ease-in-out;
+      }
+
+      &--line::before {
+        top: -2.2rem;
+      }
+
+      &--line::after {
+        top: 1.3rem;
+      }
+    }
+
+    &__overlay.open {
+      display: block;
+      opacity: 0.8;
+    }
+  }
+}
+
+// Upwards
+@keyframes upwards {
+  // Starting point
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  // Ending Point
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Downwards
+@keyframes downwards {
+  // Starting point
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  // Ending Point
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

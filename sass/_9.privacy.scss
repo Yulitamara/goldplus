@@ -1,0 +1,25 @@
+.privacy {
+  grid-column: container-start / container-end;
+  padding: 10rem 20rem;
+  line-height: 2.2;
+  color: var(--color-on-background);
+  &__title {
+    font-size: font-size(font-size-regular);
+    font-weight: font-weight(font-weight-light);
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+  &__small-title {
+    font-size: font-size(font-size-small);
+    font-weight: font-weight(font-weight-light);
+    letter-spacing: 0.1rem;
+  }
+  &__para {
+    font-size: font-size(font-size-x-small);
+    padding: 1rem 0;
+  }
+  //*-*-*-*-*-*-*-*-*-*-- The 800px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
+  @include media-tablet {
+    padding: 5rem 2.5rem;
+  }
+}
