@@ -3,22 +3,7 @@
 
   //   @extend %sec-padding;
   padding: 3rem 35rem;
-  background: -webkit-linear-gradient(
-    right,
-    #bf953f,
-    #fcf6ba,
-    #d0a956,
-    #fbf5b7,
-    #dcb777
-  );
-  background: linear-gradient(
-    right,
-    #bf953f,
-    #fcf6ba,
-    #d0a956,
-    #fbf5b7,
-    #dcb777
-  );
+  background-color: var(--color-primary);
 
   &__title {
     color: var(--color-on-primary);

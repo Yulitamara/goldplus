@@ -1,6 +1,6 @@
 .hero {
   grid-column: container-start / container-end;
-  // background-color: var(--color-primary);
+  background-color: var(--color-primary);
   color: var(--color-on-primary);
   @extend %sec-padding;
   height: 100vh;
@@ -12,22 +12,8 @@
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  background: -webkit-linear-gradient(
-    right,
-    #bf953f,
-    #fcf6ba,
-    #d0a956,
-    #fbf5b7,
-    #dcb777
-  );
-  background: linear-gradient(
-    right,
-    #bf953f,
-    #fcf6ba,
-    #d0a956,
-    #fbf5b7,
-    #dcb777
-  );
+  // background: -webkit-linear-gradient(right, #d3a954, #fcf6ba);
+  // background: linear-gradient(right, #d6a94d, #fcf6ba);
 
   &__content {
     display: flex;
