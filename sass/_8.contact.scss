@@ -50,10 +50,9 @@
     }
 
     &--form {
-        background-color: var(--color-primary);
+        background-color: var(--color-secondary);
       color: var(--color-on-primary);
       border-radius: 30px;
-      border: 1px solid var(--color-on-primary);
       @extend %sec-padding;
 
       &__title {

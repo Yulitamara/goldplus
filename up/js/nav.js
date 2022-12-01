@@ -11,3 +11,16 @@ menu.addEventListener("click", () => {
 // Footer //
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
+
+let mainNavLinks = document.querySelectorAll("header__nav--links__item a");
+
+mainNavLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    let target = document.querySelector(event.target.hash);
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+});

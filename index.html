@@ -31,25 +31,25 @@
                     <a href="#" id="homeNav">גולדפלוס</a>
                 </li>
                 <li class="header__nav--links__item">
-                    <a href="#about" id="aboutNav">מכירות</a>
+                    <a href="#sales" id="aboutNav">מכירות</a>
                 </li>
                 <li class="header__nav--links__item">
-                    <a href="#login" id="loginNav">שיווק</a>
+                    <a href="#marketing" id="loginNav">שיווק</a>
                 </li>
                 <li class="header__nav--links__item">
-                    <a href="#contact" id="contactNav">שירות</a>
+                    <a href="#service" id="contactNav">שירות</a>
                 </li>
                 <li class="header__nav--links__item">
-                    <a href="#contact" id="contactNav">פרויקטים</a>
+                    <a href="#projects" id="contactNav">פרויקטים</a>
                 </li>
                 <li class="header__nav--links__item">
-                    <a href="#contact" id="contactNav">מסמכים</a>
+                    <a href="#documents" id="contactNav">מסמכים</a>
                 </li>
                 <li class="header__nav--links__item">
-                    <a href="#contact" id="contactNav">יומנים</a>
+                    <a href="#calender" id="contactNav">יומנים</a>
                 </li>
                 <li class="header__nav--links__item">
-                    <a href="#contact" id="contactNav">יתרונות</a>
+                    <a href="#advantages" id="contactNav">יתרונות</a>
                 </li>
                 <li class="header__nav--links__item">
                     <a href="#contact" id="contactNav">קשר</a>
@@ -115,7 +115,7 @@
     </section>
 
     <!---*-*-*-*-*-*-*-*--*-*-*- Sales Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="sales">
+    <section class="sales" id="sales">
         <h1 class="sales__title">ניהול מכירות</h1>
         <div class="sales__line"></div>
         <div class="sales__content">
@@ -177,7 +177,7 @@
     </section>
 
     <!---*-*-*-*-*-*-*-*--*-*-*- Marketing Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="sales">
+    <section class="sales" id="marketing">
         <h1 class="sales__title">ניהול שיווק</h1>
         <div class="sales__line"></div>
         <div class="sales__content reverse">
@@ -239,7 +239,7 @@
     </section>
 
     <!---*-*-*-*-*-*-*-*--*-*-*- Service Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="sales">
+    <section class="sales" id="service">
         <h1 class="sales__title">ניהול שירות</h1>
         <div class="sales__line"></div>
         <div class="sales__content">
@@ -301,7 +301,7 @@
     </section>
 
     <!---*-*-*-*-*-*-*-*--*-*-*- Projects Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="sales">
+    <section class="sales" id="projects">
         <h1 class="sales__title">ניהול פרויקטים</h1>
         <div class="sales__line"></div>
         <div class="sales__content reverse">
@@ -363,7 +363,7 @@
     </section>
 
     <!---*-*-*-*-*-*-*-*--*-*-*- Documents Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="sales">
+    <section class="sales" id="documents">
         <h1 class="sales__title">ניהול מסמכים</h1>
         <div class="sales__line"></div>
         <div class="sales__content">
@@ -425,7 +425,7 @@
     </section>
 
     <!---*-*-*-*-*-*-*-*--*-*-*- Calender Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="sales">
+    <section class="sales" id="calender">
         <h1 class="sales__title">ניהול יומנים</h1>
         <div class="sales__line"></div>
         <div class="sales__content reverse">
@@ -486,7 +486,7 @@
     </section>
 
     <!---*-*-*-*-*-*-*-*--*-*-*- Advantages Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="advantages">
+    <section class="advantages" id="advantages">
         <h1 class="advantages__title">
             יתרונות
         </h1>
@@ -639,41 +639,27 @@
                 <h3 class="contact__content--form__title" id="contactFormTitle">שלחו לנו הודעה</h3>
                 <div class="contact__content--form__fields">
                     <div class="field-container">
-                        <div class="label-container">
-                            <span class="material-symbols-outlined label-icon"> person </span>
-                        </div>
                         <div class="input-container">
+                            <span class="material-symbols-outlined label-icon"> person </span>
                             <input type="text" class="input" placeholder="שם מלא (נדרש)" id="contactFormFullName" />
                         </div>
                     </div>
                     <div class="field-container">
-                        <div class="label-container">
-                            <span class="material-symbols-outlined label-icon"> mail </span>
-                            <!-- <label class="label-text"> <nobr> Type of receipt </nobr> </label> -->
-                            <!-- <div class="rquired">*</div> -->
-                        </div>
                         <div class="input-container">
+                            <span class="material-symbols-outlined label-icon"> mail </span>
                             <input type="text" class="input" placeholder="כתובת מייל / שם משתמש (נדרש)"
                                 id="contactFormEmail" />
                         </div>
                     </div>
                     <div class="field-container">
-                        <div class="label-container">
-                            <span class="material-symbols-outlined label-icon"> call </span>
-                            <!-- <label class="label-text"> <nobr> Type of receipt </nobr> </label> -->
-                            <!-- <div class="rquired">*</div> -->
-                        </div>
                         <div class="input-container">
+                            <span class="material-symbols-outlined label-icon"> call </span>
                             <input type="number" class="input" placeholder="טלפון (נדרש)" id="contactFormPhone" />
                         </div>
                     </div>
                     <div class="field-container">
-                        <div class="label-container">
-                            <span class="material-symbols-outlined label-icon"> corporate_fare </span>
-                            <!-- <label class="label-text"> <nobr> Type of receipt </nobr> </label> -->
-                            <!-- <div class="rquired">*</div> -->
-                        </div>
                         <div class="input-container">
+                            <span class="material-symbols-outlined label-icon"> corporate_fare </span>
                             <input type="text" class="input" placeholder="ארגון" id="contactFormOrganization" />
                         </div>
                     </div>
@@ -682,7 +668,7 @@
                         <textarea name="message" class="input"></textarea>
                     </div>
                 </div>
-                <input type="submit" value="שלח" class="contact__content--form__link btn-secondary"
+                <input type="submit" value="שלח" class="contact__content--form__link btn-primary"
                     id="contactSubmitBtn" />
             </form>
         </div>

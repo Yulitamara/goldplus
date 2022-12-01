@@ -51,31 +51,20 @@ i {
 .btn-primary {
   font-size: font-size(font-size-small);
   padding: calc(0.5rem + 1vh) calc(1rem + 1vw);
-  border: 2px solid;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  background-color: transparent;
-  color: var(--color-on-primary);
-}
-
-.btn-primary:hover {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.333);
-}
-
-.btn-secondary {
-  font-size: font-size(font-size-small);
-  padding: calc(0.5rem + 1vh) calc(1rem + 1vw);
   border: 1.3px solid;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  color: var(--color-background);
-  background-color: var(--color-on-background);
-}
-.btn-secondary:hover {
+  background-color: transparent;
+  color: var(--color-on-secondary);
+  background-color: var(--color-secondary);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.333);
 }
+
+.btn-primary:hover {
+  box-shadow: none;
+}
+
 /////////////////// FORNS //////////////////////
 input[type="text"],
 input[type="password"],
@@ -84,7 +73,7 @@ input[type="number"] {
   border: none;
   padding: 0 0.5rem;
   font-size: font-size(font-size-small);
-  color: var(--color-on-primary);
+  color: var(--color-on-secondary);
   background-color: transparent;
   width: 100%;
 }
@@ -122,9 +111,9 @@ textarea {
     resize: none;
     padding: 10px;
     font-size: font-size(font-size-small);
-    // background-color: var(--color-primary);
-    color: var(--color-on-primary);
-    border: 1.3px solid var(--color-on-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
+    border: 1.3px solid var(--color-on-secondary);
     border-radius: 5px;
   }
 }
@@ -134,34 +123,39 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-.label-container {
-  background-color: var(--color-surface);
-  display: flex;
-  padding: 0 1rem;
-  align-items: center;
-  height: 6rem;
-  // border-radius: 5px 0 0 5px;
-}
-.label-container .label-icon,
-.label-container .label-text,
-.label-container .rquired {
-  font-size: font-size(font-size-small);
-}
+// .label-container {
+//   // background-color: var(--color-surface);
+//   display: flex;
+//   padding: 0 1rem;
+//   align-items: center;
+//   height: 6rem;
+//   // border-radius: 5px 0 0 5px;
+// }
+// .label-container .label-icon,
+// .label-container .label-text,
+// .label-container .rquired {
+//   font-size: font-size(font-size-small);
+// }
 
-.label-container .rquired {
-  color: var(--color-error);
-}
+// .label-container .rquired {
+//   color: var(--color-error);
+// }
 
 .input-container {
-  background-color: var(--color-on-background);
+  // background-color: var(--color-on-background);
+  height: 6rem;
+  border: 1.3px solid var(--color-on-secondary);
+  border-radius: 4px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex: 1;
   min-width: 0;
-  // border-radius: 0 5px 5px 0;
 
   padding-left: 1rem;
+  align-items: center;
+  padding: 0 1rem;
+  color: grey;
 }
 
 input:focus {
