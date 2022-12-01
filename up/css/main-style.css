@@ -16,7 +16,7 @@ html {
 }
 
 html {
-  --color-primary: #f5f8fe;
+  --color-primary: #eff4ff;
   --color-on-primary: #030b5d;
   --color-on-primary-lighter: #2c4a7d;
   --color-hover-primary: #c2dff6;
@@ -394,6 +394,7 @@ input:focus {
   color: var(--color-on-primary);
   padding: 2rem;
   border-radius: 10px;
+  background-color: #f5f8fe;
 }
 .hero__content--boxes__box--header {
   display: flex;
