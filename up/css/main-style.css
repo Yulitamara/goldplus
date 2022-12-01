@@ -78,13 +78,12 @@ i {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: transparent;
-  color: var(--color-on-primary);
-  background-color: var(--color-primary);
-  box-shadow: 2px 2px 5px rgba(106, 112, 138, 0.333);
+  color: #fff;
+  background-color: #3368fa;
 }
 
 .btn-primary:hover {
-  box-shadow: none;
+  background-color: #2049ba;
 }
 
 input[type=text],
@@ -152,7 +151,7 @@ textarea {
   padding-left: 1rem;
   align-items: center;
   padding: 0 1rem;
-  color: grey;
+  color: var(--color-on-primary);
 }
 
 input:focus {
