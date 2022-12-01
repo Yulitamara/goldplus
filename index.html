@@ -632,7 +632,7 @@
                 </div>
 
             </div>
-            <form action="index.html" autocomplete="off" class="contact__content--form">
+            <form onsubmit="sendEmail(); reset(); return fales" autocomplete="off" class="contact__content--form">
                 <h3 class="contact__content--form__title" id="contactFormTitle">שלחו לנו הודעה</h3>
                 <div class="contact__content--form__fields">
                     <div class="field-container">
@@ -693,6 +693,24 @@
 
     <!-- Scroll -->
     <script src="./up/js/scroll.js"></script>
+
+    <!-- Mail -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "yulitabenari@gmail.com",
+                Password: "2BDFAE3F1DD2406735190F17F2986ACB4427",
+                To: 'yulitabenari@gmail.com',
+                From: document.getElementById("contactFormEmail").value,
+                Subject: "New Contact Form Enquiry",
+                Body: "Name: " + document.getElementById("contactFormName").value + "<br> Email: " + document.getElementById("contactFormEmail").value + "<br> Phone no: " + document.getElementById("contactFormEmail").value + "<br> Message: " + document.getElementById("contactFormMessage").value
+            }).then(
+                message => alert(message => alert("Message Sent Succefully"))
+            );
+        }
+    </script>
 </body>
 
 </html>

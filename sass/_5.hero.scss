@@ -53,8 +53,10 @@
           gap: 24px;
           &__title {
             @extend %sec-heading;
+            color: var(--color-on-primary-lighter);
           }
           &__icon {
+            color: var(--color-on-primary-lighter);
             font-size: font-size(font-size-regular);
           }
         }

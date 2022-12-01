@@ -34,9 +34,9 @@
 }
 // *-*-*-*-*-*--*-*-*-*-*-*-*-*---------------------------------*-*-*-*-*-*-*--*-*-*--*-*-*-*-*-*-*-*
 
-// ::selection {
-//   background-color: var(--color-primary);
-// }
+::selection {
+  background-color: rgb(251, 221, 226);
+}
 
 @import "1.reset";
 @import "2.variables";

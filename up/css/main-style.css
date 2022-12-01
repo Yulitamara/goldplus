@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+::selection {
+  background-color: rgb(251, 221, 226);
+}
+
 *,
 *::before,
 *::after {
@@ -14,6 +18,7 @@ html {
 html {
   --color-primary: #f5f8fe;
   --color-on-primary: #030b5d;
+  --color-on-primary-lighter: #2c4a7d;
   --color-hover-primary: #c2dff6;
   --color-transparent-primary: #d0b0479e;
   --color-gold: #d0af47;
@@ -396,7 +401,11 @@ input:focus {
   align-items: center;
   gap: 24px;
 }
+.hero__content--boxes__box--header__title {
+  color: var(--color-on-primary-lighter);
+}
 .hero__content--boxes__box--header__icon {
+  color: var(--color-on-primary-lighter);
   font-size: calc(1.5rem + 1vw);
 }
 .hero__content--boxes__box--para {
@@ -453,7 +462,7 @@ input:focus {
   justify-content: space-between;
 }
 .sales__content--boxes__box--header__title {
-  color: #2c4a7d;
+  color: var(--color-on-primary-lighter);
   transition: all 0.3s ease-in-out;
 }
 .sales__content--boxes__box--header__icon-container {
