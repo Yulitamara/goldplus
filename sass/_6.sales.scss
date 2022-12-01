@@ -15,7 +15,7 @@
   &__title {
     padding-top: 2rem;
     align-self: flex-start;
-    color: var(--color-primary);
+    color: var(--color-on-primary);
     font-size: font-size(font-size-large);
     font-weight: font-weight(font-weight-regular);
     letter-spacing: 0.1rem;
@@ -40,12 +40,9 @@
           align-items: center;
           justify-content: space-between;
           &__title {
-            color: var(--color-primary);
+            color: var(--color-on-primary);
             transition: all 0.3s ease-in-out;
             @extend %sec-heading;
-          }
-          &__title:hover {
-            color: var(--color-hover-primary);
           }
           &__icon-container {
             display: flex;

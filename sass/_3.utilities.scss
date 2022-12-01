@@ -56,9 +56,9 @@ i {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: transparent;
-  color: var(--color-on-secondary);
-  background-color: var(--color-secondary);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.333);
+  color: var(--color-on-primary);
+  background-color: var(--color-primary);
+  box-shadow: 2px 2px 5px rgba(106, 112, 138, 0.333);
 }
 
 .btn-primary:hover {
@@ -73,7 +73,7 @@ input[type="number"] {
   border: none;
   padding: 0 0.5rem;
   font-size: font-size(font-size-small);
-  color: var(--color-on-secondary);
+  color: var(--color-on-primary);
   background-color: transparent;
   width: 100%;
 }
@@ -111,9 +111,9 @@ textarea {
     resize: none;
     padding: 10px;
     font-size: font-size(font-size-small);
-    background-color: var(--color-secondary);
-    color: var(--color-on-secondary);
-    border: 1.3px solid var(--color-on-secondary);
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border: 1.3px solid var(--color-on-primary);
     border-radius: 5px;
   }
 }
@@ -144,7 +144,7 @@ textarea {
 .input-container {
   // background-color: var(--color-on-background);
   height: 6rem;
-  border: 1.3px solid var(--color-on-secondary);
+  border: 1.3px solid var(--color-on-primary);
   border-radius: 4px;
   display: flex;
   flex-direction: row;

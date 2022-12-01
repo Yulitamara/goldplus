@@ -21,8 +21,12 @@
     margin-top: 20rem;
     @extend %sec-padding;
     &--title {
-      padding: 1rem;
-      width: 212px;
+      // padding: 1rem;
+      // width: 212px;
+      font-size: font-size(font-size-large);
+      letter-spacing: -2.4px;
+      transform: scale(1, 1.5);
+      color: var(--color-gold);
     }
     &--para {
       font-size: font-size(font-size-regular);
@@ -78,4 +82,3 @@
     }
   }
 }
-

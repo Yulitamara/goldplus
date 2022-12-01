@@ -50,7 +50,7 @@
     }
 
     &--form {
-        background-color: var(--color-secondary);
+      background-color: var(--color-primary);
       color: var(--color-on-primary);
       border-radius: 30px;
       @extend %sec-padding;
