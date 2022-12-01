@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
-::selection {
-  background-color: var(--color-primary);
-}
-
 *,
 *::before,
 *::after {
@@ -212,15 +208,15 @@ input:focus {
   max-width: 1700px;
   display: flex;
   justify-content: space-evenly;
-  color: var(--color-on-background);
-  background-color: var(--color-background);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--color-on-background);
   overflow: hidden;
 }
 .header__nav--logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(64, 68, 80, 0.763);
+  padding: 0 20px;
 }
 .header__nav--logo img {
   width: 150px;
@@ -232,7 +228,7 @@ input:focus {
 .header__nav--links__item a:link,
 .header__nav--links__item a:visited {
   padding: 0 2rem;
-  color: var(--color-on-background);
+  color: var(--color-background);
 }
 .header__nav--links__item:nth-child(odd) {
   animation: downwards 1s forwards;
@@ -260,6 +256,9 @@ input:focus {
     transform: perspective(70rem) rotateY(180deg);
     transform-origin: top left;
     transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .header__nav--logo {
+    padding: 20px 0;
   }
   .header__nav--links {
     height: 70%;
@@ -369,7 +368,6 @@ input:focus {
 .hero__content--title {
   font-size: calc(1.5rem + 2vw);
   letter-spacing: -2.4px;
-  transform: scale(1, 1.5);
   color: var(--color-gold);
 }
 .hero__content--para {
@@ -427,8 +425,7 @@ input:focus {
   height: 2px;
   width: 100%;
   margin: 2rem 0 4rem 0;
-  background: -webkit-linear-gradient(left, #8f6b29, #fde08d, #df9f28);
-  background: linear-gradient(left, #8f6b29, #fde08d, #df9f28);
+  background-color: lightgray;
 }
 .sales__title {
   padding-top: 2rem;
@@ -457,7 +454,7 @@ input:focus {
   justify-content: space-between;
 }
 .sales__content--boxes__box--header__title {
-  color: var(--color-on-primary);
+  color: #2c4a7d;
   transition: all 0.3s ease-in-out;
 }
 .sales__content--boxes__box--header__icon-container {

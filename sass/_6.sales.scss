@@ -9,8 +9,9 @@
     height: 2px;
     width: 100%;
     margin: 2rem 0 4rem 0;
-    background: -webkit-linear-gradient(left, #8f6b29, #fde08d, #df9f28);
-    background: linear-gradient(left, #8f6b29, #fde08d, #df9f28);
+    // background: -webkit-linear-gradient(left, #8f6b29, #fde08d, #df9f28);
+    // background: linear-gradient(left, #8f6b29, #fde08d, #df9f28);
+    background-color: lightgray;
   }
   &__title {
     padding-top: 2rem;
@@ -40,7 +41,8 @@
           align-items: center;
           justify-content: space-between;
           &__title {
-            color: var(--color-on-primary);
+            // color: var(--color-on-primary);
+            color: #2c4a7d;
             transition: all 0.3s ease-in-out;
             @extend %sec-heading;
           }
