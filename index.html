@@ -602,6 +602,93 @@
         </div>
     </section>
 
+    <!---*-*-*-*-*-*-*-*--*-*-*- Contact Section --*-*-*-*-*-*-*-*-*-*-*-->
+    <section class="contact" id="contact">
+        <div class="contact__content">
+            <div class="contact__content--info">
+                <h3 class="contact__content--info__title" id="contactInfoTitle">צרו קשר עכשיו!</h3>
+                <p class="contact__content--info__para" id="contactInfoPara">
+                    שעות הפעילות 9:00-17:00 ימים א – ה. למעט ערבי חג.
+                </p>
+                <div class="contact__content--info__details">
+                    <div class="contact__content--info__details--detail">
+                        <span class="material-symbols-outlined contact-icon">
+                            pin_drop
+                        </span>
+                        <p id="contactInfoAddress">דרך בן גוריון 24, רמת גן</p>
+                    </div>
+                    <div class="contact__content--info__details--detail">
+                        <span class="material-symbols-outlined contact-icon">
+                            mail
+                        </span>
+                        <p>sales@impactsoft.co.il</p>
+                    </div>
+                    <div class="contact__content--info__details--detail">
+                        <span class="material-symbols-outlined contact-icon">
+                            call
+                        </span>
+                        <p>03-6101800</p>
+                    </div>
+                </div>
+                <div class="contact__content--info__img">
+                    <!-- <img src="/up/imgs/contact.svg" alt=""> -->
+                </div>
+
+            </div>
+            <form action="index.html" autocomplete="off" class="contact__content--form">
+                <h3 class="contact__content--form__title" id="contactFormTitle">שלחו לנו הודעה</h3>
+                <div class="contact__content--form__fields">
+                    <div class="field-container">
+                        <div class="label-container">
+                            <span class="material-symbols-outlined label-icon"> person </span>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" class="input" placeholder="שם מלא (נדרש)" id="contactFormFullName" />
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <div class="label-container">
+                            <span class="material-symbols-outlined label-icon"> mail </span>
+                            <!-- <label class="label-text"> <nobr> Type of receipt </nobr> </label> -->
+                            <!-- <div class="rquired">*</div> -->
+                        </div>
+                        <div class="input-container">
+                            <input type="text" class="input" placeholder="כתובת מייל / שם משתמש (נדרש)"
+                                id="contactFormEmail" />
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <div class="label-container">
+                            <span class="material-symbols-outlined label-icon"> call </span>
+                            <!-- <label class="label-text"> <nobr> Type of receipt </nobr> </label> -->
+                            <!-- <div class="rquired">*</div> -->
+                        </div>
+                        <div class="input-container">
+                            <input type="number" class="input" placeholder="טלפון (נדרש)" id="contactFormPhone" />
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <div class="label-container">
+                            <span class="material-symbols-outlined label-icon"> corporate_fare </span>
+                            <!-- <label class="label-text"> <nobr> Type of receipt </nobr> </label> -->
+                            <!-- <div class="rquired">*</div> -->
+                        </div>
+                        <div class="input-container">
+                            <input type="text" class="input" placeholder="ארגון" id="contactFormOrganization" />
+                        </div>
+                    </div>
+                    <div class="textarea">
+                        <label class="textarea__title" id="textareaTitle">תוכן ההודעה:</label>
+                        <textarea name="message" class="input"></textarea>
+                    </div>
+                </div>
+                <input type="submit" value="שלח" class="contact__content--form__link btn-secondary"
+                    id="contactSubmitBtn" />
+            </form>
+        </div>
+    </section>
+
+
     <!---*-*-*-*-*-*-*-*--*-*-*- Scroll to Top Button --*-*-*-*-*-*-*-*-*-*-*-->
     <div class="scroll">
         <span class="material-symbols-outlined">

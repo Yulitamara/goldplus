@@ -1,0 +1,87 @@
+.contact {
+  grid-column: container-start / container-end;
+  border-top: 1px solid #cecece;
+
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend %sec-padding;
+
+  &__content {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--color-on-primary);
+
+    &--info {
+      display: flex;
+      flex-direction: column;
+      @extend %sec-padding;
+      &__title {
+        @extend %sec-heading;
+      }
+      &__para {
+        @extend %sec-para;
+      }
+      &__details {
+        margin-top: 2rem;
+
+        &--detail {
+          margin: 0.7rem 0;
+          display: flex;
+          align-items: center;
+          font-size: font-size(font-size-small);
+          gap: 0.7rem;
+
+          .contact-icon {
+            width: 28px;
+          }
+        }
+      }
+      &__img {
+        align-self: center;
+        margin-top: 4rem;
+        img {
+          width: 200px;
+        }
+      }
+    }
+
+    &--form {
+        background-color: var(--color-primary);
+      color: var(--color-on-primary);
+      border-radius: 30px;
+      border: 1px solid var(--color-on-primary);
+      @extend %sec-padding;
+
+      &__title {
+        @extend %sec-heading;
+      }
+      &__link {
+        margin-top: 2rem;
+        width: 100%;
+      }
+    }
+  }
+
+  //*-*-*-*-*-*-*-*-*-*-- The 800px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
+  @include media-tablet {
+    &__content {
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+      &--info {
+        align-items: center;
+        &__img {
+          margin-top: 0;
+          img {
+            width: 130px;
+          }
+        }
+      }
+    }
+  }
+}

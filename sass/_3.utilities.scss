@@ -56,7 +56,7 @@ i {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: transparent;
-  color: var(--color-on-background);
+  color: var(--color-on-primary);
 }
 
 .btn-primary:hover {
@@ -66,16 +66,15 @@ i {
 .btn-secondary {
   font-size: font-size(font-size-small);
   padding: calc(0.5rem + 1vh) calc(1rem + 1vw);
-  border: 2px solid;
+  border: 1.3px solid;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  color: var(--color-on-tertiary);
-  background-color: var(--color-tertiary);
+  color: var(--color-background);
+  background-color: var(--color-on-background);
 }
 .btn-secondary:hover {
-  color: var(--color-tertiary);
-  background-color: var(--color-on-tertiary);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.333);
 }
 /////////////////// FORNS //////////////////////
 input[type="text"],
@@ -85,7 +84,7 @@ input[type="number"] {
   border: none;
   padding: 0 0.5rem;
   font-size: font-size(font-size-small);
-  color: var(--color-on-tertiary);
+  color: var(--color-on-primary);
   background-color: transparent;
   width: 100%;
 }
@@ -123,10 +122,10 @@ textarea {
     resize: none;
     padding: 10px;
     font-size: font-size(font-size-small);
-    background-color: var(--color-background);
-    color: var(--color-on-background);
+    // background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border: 1.3px solid var(--color-on-primary);
     border-radius: 5px;
-    border: none;
   }
 }
 
@@ -154,7 +153,7 @@ textarea {
 }
 
 .input-container {
-  background-color: var(--color-background);
+  background-color: var(--color-on-background);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
