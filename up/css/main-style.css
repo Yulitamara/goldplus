@@ -372,7 +372,6 @@ input:focus {
   grid-column: container-start/container-end;
   background-color: var(--color-primary);
   color: var(--color-on-primary);
-  height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -425,9 +424,6 @@ input:focus {
   text-align: center;
 }
 @media screen and (max-width: 1200px) {
-  .hero {
-    height: fit-content;
-  }
   .hero__content {
     margin-top: 0;
   }

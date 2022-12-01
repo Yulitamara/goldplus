@@ -3,7 +3,6 @@
   background-color: var(--color-primary);
   color: var(--color-on-primary);
   @extend %sec-padding;
-  height: 100vh;
 
   display: flex;
   align-items: center;
@@ -65,7 +64,6 @@
   }
   // *-*-*-*-*-*-*-*-*-*-- The 1200px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
   @include media-tablet {
-    height: fit-content;
     &__content {
       margin-top: 0;
     }
