@@ -28,7 +28,7 @@ mainNavLinks.forEach((link) => {
     let target = document.querySelector(event.target.hash);
     // Scroll to target element with an offset of 90px
     window.scrollTo({
-      top: target.getBoundingClientRect().top + window.scrollY - 90,
+      top: target.getBoundingClientRect().top + window.scrollY,
       behavior: "smooth",
     });
   });
