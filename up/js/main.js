@@ -26,9 +26,14 @@ mainNavLinks.forEach((link) => {
     event.preventDefault();
     closeNavbar(); // Close the navbar when a link is clicked
     let target = document.querySelector(event.target.hash);
-    // Scroll to target element with an offset of 90px
+
+    // Check if the window width is greater than 1200px
+    const windowWidth = window.innerWidth;
+    const offset = windowWidth > 1200 ? 90 : 0;
+
+    // Scroll to target element with the appropriate offset
     window.scrollTo({
-      top: target.getBoundingClientRect().top + window.scrollY,
+      top: target.getBoundingClientRect().top + window.scrollY - offset,
       behavior: "smooth",
     });
   });
