@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 ::selection {
-  background-color: rgb(251, 221, 226);
+  background-color: #fef5c8;
 }
 
 *,
@@ -195,15 +195,6 @@ input:focus {
 .header.open .header__menu--line::before, .header.open .header__menu--line::after {
   top: 0;
 }
-.header__overlay {
-  width: 100%;
-  height: 100vh;
-  background-color: var(--color-background);
-  position: fixed;
-  opacity: 0;
-  display: none;
-  z-index: 10;
-}
 .header__nav {
   width: 100%;
   height: 12rem;
@@ -242,7 +233,7 @@ input:focus {
 }
 @media screen and (min-width: 1700px) {
   .header__nav--links__item a:link,
-.header__nav--links__item a:visited {
+  .header__nav--links__item a:visited {
     font-size: 1.7rem;
   }
 }
@@ -273,18 +264,18 @@ input:focus {
     animation: initial;
   }
   .header__nav--links__item a:link,
-.header__nav--links__item a:visited {
+  .header__nav--links__item a:visited {
     transform-origin: left;
     margin-right: initial;
     padding: 1rem;
     font-size: calc(1.2rem + 0.4vw);
   }
   .header__nav--links__item a:hover,
-.header__nav--links__item a:active {
+  .header__nav--links__item a:active {
     transform: rotateY(90deg);
   }
   .header__nav--links__item a:link::after,
-.header__nav--links__item a:visited::after {
+  .header__nav--links__item a:visited::after {
     top: 0;
     bottom: 100%;
     left: 100%;
@@ -329,6 +320,16 @@ input:focus {
     display: block;
     opacity: 0.8;
   }
+}
+
+.header__overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(242, 242, 242, 0.854);
+  position: fixed;
+  opacity: 0;
+  display: none;
+  z-index: 1;
 }
 
 @keyframes upwards {
@@ -605,6 +606,15 @@ input:focus {
 .contact__content--form__link {
   margin-top: 2rem;
   width: 100%;
+}
+.contact .contact__error {
+  font-size: 16px;
+}
+.contact .color-red {
+  color: hsl(4, 71%, 50%);
+}
+.contact .color-blue {
+  color: hsl(207, 56%, 45%);
 }
 @media screen and (max-width: 1200px) {
   .contact__content {

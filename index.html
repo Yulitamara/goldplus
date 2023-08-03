@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="%PUBLIC_URL%/logo.png" /> -->
+    <link rel="icon" href="/up/imgs/calendar-man.png" />
     <!-- Google Icons -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -21,14 +23,11 @@
             <div class="header__menu--line"></div>
         </div>
 
-        <!-- Overlay -->
-        <div class="header__overlay"></div>
-
         <!-- Navigation -->
         <nav class="header__nav">
             <ul class="header__nav--links">
                 <li class="header__nav--links__item">
-                    <a href="#" id="homeNav">גולדפלוס</a>
+                    <a href="#hero" id="homeNav">גולדפלוס</a>
                 </li>
                 <li class="header__nav--links__item">
                     <a href="#sales" id="aboutNav">מכירות</a>
@@ -62,9 +61,11 @@
 
         </nav>
     </header>
+    <!-- Overlay -->
+    <div class="header__overlay"></div>
 
     <!---*-*-*-*-*-*-*-*--*-*-*- Hero Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero__content">
             <!-- <img src="./up/imgs/goldplus.png" class="hero__content--title" alt="goldplus" /> -->
             <h1 class="hero__content--title">GOLD PLUS</h1>
@@ -632,41 +633,48 @@
                 </div>
 
             </div>
-            <form onsubmit="sendEmail(); reset(); return fales" autocomplete="off" class="contact__content--form">
+            <form autocomplete="off" class="contact__content--form" id="contact-form">
                 <h3 class="contact__content--form__title" id="contactFormTitle">שלחו לנו הודעה</h3>
                 <div class="contact__content--form__fields">
                     <div class="field-container">
                         <div class="input-container">
                             <span class="material-symbols-outlined label-icon"> person </span>
-                            <input type="text" class="input" placeholder="שם מלא (נדרש)" id="contactFormFullName" />
+                            <input required type="text" name="user_name" class="input" placeholder="שם מלא (נדרש)"
+                                id="contact-name" />
                         </div>
                     </div>
                     <div class="field-container">
                         <div class="input-container">
                             <span class="material-symbols-outlined label-icon"> mail </span>
-                            <input type="text" class="input" placeholder="כתובת מייל / שם משתמש (נדרש)"
-                                id="contactFormEmail" />
+                            <input required type="text" name="user_email" class="input"
+                                placeholder="כתובת מייל / שם משתמש (נדרש)" id="contact-email" />
                         </div>
                     </div>
                     <div class="field-container">
                         <div class="input-container">
                             <span class="material-symbols-outlined label-icon"> call </span>
-                            <input type="number" class="input" placeholder="טלפון (נדרש)" id="contactFormPhone" />
+                            <input required type="number" name="user_phone" class="input" id="contact-phone"
+                                placeholder="טלפון (נדרש)" id="contactFormPhone" />
                         </div>
                     </div>
                     <div class="field-container">
                         <div class="input-container">
                             <span class="material-symbols-outlined label-icon"> corporate_fare </span>
-                            <input type="text" class="input" placeholder="ארגון" id="contactFormOrganization" />
+                            <input type="text" class="input" name="user_organization" placeholder="ארגון"
+                                id="contact-organization" />
                         </div>
                     </div>
                     <div class="textarea">
                         <label class="textarea__title" id="textareaTitle">תוכן ההודעה:</label>
-                        <textarea name="message" class="input"></textarea>
+                        <textarea name="message" id="contact-message" class="input"></textarea>
                     </div>
+
                 </div>
-                <input type="submit" value="שלח" class="contact__content--form__link btn-primary"
-                    id="contactSubmitBtn" />
+
+                <p class="contact__error" id="contact-error"></p>
+
+
+                <button type="submit" class="contact__content--form__link btn-primary" id="contact-button">שלח</button>
             </form>
         </div>
     </section>
@@ -689,26 +697,16 @@
 
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* JavaScript Files *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
     <!-- Nav -->
-    <script src="./up/js/nav.js"></script>
+    <script src="./up/js/main.js"></script>
+
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 
     <!-- Scroll -->
     <script src="./up/js/scroll.js"></script>
 
     <!-- Mail -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                SecureToken: "2ed87165-0328-4629-8df5-3e646c4e1ee8",
-                To: 'yulitabenari@gmail.com',
-                From: document.getElementById("contactFormEmail").value,
-                Subject: "New Contact Form Enquiry",
-                Body: "Name: " + document.getElementById("contactFormName").value + "<br> Email: " + document.getElementById("contactFormEmail").value + "<br> Phone no: " + document.getElementById("contactFormEmail").value + "<br> Message: " + document.getElementById("contactFormMessage").value
-            }).then(
-                message => alert(message => alert("Message Sent Succefully"))
-            );
-        }
-    </script>
 </body>
 
 </html>

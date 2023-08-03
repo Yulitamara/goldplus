@@ -65,6 +65,18 @@
     }
   }
 
+  .contact__error {
+    // text-align: center;
+    font-size: 16px;
+  }
+
+  .color-red {
+    color: hsl(4, 71%, 50%);
+  }
+
+  .color-blue {
+    color: hsl(207, 56%, 45%);
+  }
   //*-*-*-*-*-*-*-*-*-*-- The 800px Mark Break Point *-*-*-*-*-*-*-*-*-*-*
   @include media-tablet {
     &__content {
