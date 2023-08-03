@@ -204,17 +204,17 @@ input:focus {
   display: flex;
   justify-content: space-evenly;
   background-color: var(--color-on-background);
+  background-color: white;
   overflow: hidden;
 }
 .header__nav--logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(64, 68, 80, 0.763);
   padding: 0 20px;
 }
 .header__nav--logo img {
-  width: 150px;
+  width: 200px;
 }
 .header__nav--links {
   display: flex;
