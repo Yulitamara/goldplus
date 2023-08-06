@@ -110,6 +110,10 @@ textarea {
   outline: none !important;
 }
 
+textarea {
+  font-family: "Open Sans", sans-serif;
+}
+
 .field-container {
   display: flex;
   justify-content: center;
