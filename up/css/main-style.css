@@ -441,6 +441,9 @@ input:focus {
   .hero__content {
     margin-top: 0;
   }
+  .hero__content--title {
+    font-size: 35px;
+  }
 }
 @media screen and (max-width: 800px) {
   .hero__content--para {

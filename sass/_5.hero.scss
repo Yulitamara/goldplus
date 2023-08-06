@@ -94,6 +94,10 @@
   @include media-tablet {
     &__content {
       margin-top: 0;
+
+      &--title {
+        font-size: 35px;
+      }
     }
   }
 
