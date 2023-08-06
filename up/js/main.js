@@ -109,3 +109,21 @@ contactForm.addEventListener("submit", sendEmail);
 
 /*=============== Footer ===============*/
 document.getElementById("year").innerHTML = new Date().getFullYear();
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+  // reset: true /* Animation repeat */,
+});
+
+sr.reveal(`.image-left`, {
+  origin: "left",
+});
+sr.reveal(`.image-right`, {
+  origin: "right",
+});
+
+// ScrollReveal().reveal(".sale-image", { delay: 500 });
